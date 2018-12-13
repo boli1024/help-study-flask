@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/bootstrap.min.css") }}" />
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/backmanage.css") }}">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/backmanage_style.css") }}">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">后台管理系统</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="" class="current">用户管理</a></li>
+                <li><a href="{{ url_for('direction.directions') }}">岗位管理</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">登录</a></li>
+                <li><a href="">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="col-md-2">
+        <div class="list-group">
+            <a class="list-group-item active" href="">学生</a>
+            <a class="list-group-item" href="">教师</a>
+            <a class="list-group-item" href="">管理员</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="page-header">用户管理</div>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="">用户列表</a></li>
+            <li><a href="search.html">用户搜索</a></li>
+            <li><a href="add.html">用户添加</a></li>
+        </ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>用户名</th>
+                    <th>学号</th>
+                    <th>密码</th>
+                    <th>方向</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% for user in users %}
+                <tr>
+                        <th scope="row">{{ user.id }}</th>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.number }}</td>
+                        <td>{{ user.password }}</td>
+                        <td>{{ user.direction.name }}</td>
+                        <td>
+                            <div role="presentation" class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">修改信息</a></li>
+                                    <li><a href="#">删除用户</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+<script src="{{ url_for("static", filename="js/jquery-3.3.1.min.js") }}"></script>
+<script src="{{ url_for("static", filename="js/bootstrap.min.js") }}"></script>
+</html>
