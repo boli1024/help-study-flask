@@ -1,0 +1,120 @@
+
+
+
+<h1>HTML Object 元素</h1>
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html/html_media.asp" title="HTML 多媒体">HTML 媒体</a></li>
+<li class="next"><a href="/html/html_audio.asp" title="HTML 音频">HTML 音频</a></li>
+</ul>
+</div>
+
+
+<div id="intro">
+<p><strong>&lt;object&gt; 的作用是支持 HTML 助手（插件）。</strong></p>
+</div>
+
+
+<div>
+<h2>HTML 助手（插件）</h2>
+
+<p>辅助应用程序（helper application）是可由浏览器启动的程序。辅助应用程序也称为插件。</p>
+
+<p>辅助程序可用于播放音频和视频（以及其他）。辅助程序是使用 &lt;object&gt; 标签来加载的。</p>
+
+<p>使用辅助程序播放视频和音频的一个优势是，您能够允许用户来控制部分或全部播放设置。</p>
+
+<p>大多数辅助应用程序允许对音量设置和播放功能（比如后退、暂停、停止和播放）的手工（或程序的）控制。</p>
+</div>
+
+
+<div>
+<h2>在 HTML 中播放视频的最好方式？</h2>
+
+<p>如需了解在 HTML 中包含音视频的最好方法，请参阅下一章节。</p>
+</div>
+
+
+<div>
+<h2>使用 QuickTime 来播放 Wave 音频</h2>
+
+<p>实例</p>
+
+<pre>
+&lt;object width=&quot;420&quot; height=&quot;360&quot;
+classid=&quot;clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B&quot;
+codebase=&quot;http://www.apple.com/qtactivex/qtplugin.cab&quot;&gt;
+&lt;param name=&quot;src&quot; value=&quot;bird.wav&quot; /&gt;
+&lt;param name=&quot;controller&quot; value=&quot;true&quot; /&gt;
+&lt;/object&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_object_qtaudio">亲自试一试</a></p>
+</div>
+
+
+<div>
+<h2>使用 QuickTime 来播放 MP4 视频</h2>
+
+<p>实例</p>
+
+<pre>
+&lt;object width=&quot;420&quot; height=&quot;360&quot;
+classid=&quot;clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B&quot;
+codebase=&quot;http://www.apple.com/qtactivex/qtplugin.cab&quot;&gt;
+&lt;param name=&quot;src&quot; value=&quot;movie.mp4&quot; /&gt;
+&lt;param name=&quot;controller&quot; value=&quot;true&quot; /&gt;
+&lt;/object&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_object_qtvideo">亲自试一试</a></p>
+</div>
+
+
+<div>
+<h2>使用 Flash 来播放 SWF 视频</h2>
+
+<p>实例</p>
+
+<pre>
+&lt;object width=&quot;400&quot; height=&quot;40&quot;
+classid=&quot;clsid:d27cdb6e-ae6d-11cf-96b8-444553540000&quot;
+codebase=&quot;http://fpdownload.macromedia.com/
+pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0&quot;&gt;
+&lt;param name=&quot;SRC&quot; value=&quot;bookmark.swf&quot;&gt;
+&lt;embed src=&quot;bookmark.swf&quot; width=&quot;400&quot; height=&quot;40&quot;&gt;&lt;/embed&gt;
+&lt;/object&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_object_flash">亲自试一试</a></p>
+</div>
+
+
+<div>
+<h2>使用 Windows Media Player 来播放 WMV 影片</h2>
+
+<p>下面的例子展示用于播放 Windows 媒体文件的推荐代码：</p>
+
+<p>实例</p>
+
+<pre>
+&lt;object width=&quot;100%&quot; height=&quot;100%&quot;
+type=&quot;video/x-ms-asf&quot; url=&quot;3d.wmv&quot; data=&quot;3d.wmv&quot;
+classid=&quot;CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6&quot;&gt;
+&lt;param name=&quot;url&quot; value=&quot;3d.wmv&quot;&gt;
+&lt;param name=&quot;filename&quot; value=&quot;3d.wmv&quot;&gt;
+&lt;param name=&quot;autostart&quot; value=&quot;1&quot;&gt;
+&lt;param name=&quot;uiMode&quot; value=&quot;full&quot; /&gt;
+&lt;param name=&quot;autosize&quot; value=&quot;1&quot;&gt;
+&lt;param name=&quot;playcount&quot; value=&quot;1&quot;&gt;
+&lt;embed type=&quot;application/x-mplayer2&quot; src=&quot;3d.wmv&quot; width=&quot;100%&quot;
+ height=&quot;100%&quot; autostart=&quot;true&quot; showcontrols=&quot;true&quot; 
+pluginspage=&quot;http://www.microsoft.com/Windows/MediaPlayer/&quot;&gt;&lt;/embed&gt;
+&lt;/object&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_object_mplayer">亲自试一试</a></p>
+</div>
+
+

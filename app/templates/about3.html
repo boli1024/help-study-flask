@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block body %}
+    <!--content-->
+    <div class="i_content">
+        <div class="adr_wrap">
+            <div class="adr">
+                <span class="adr_link"><a href={{ url_for(".index") }}>首   页</a>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;拓展功能&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;联系我们</span>
+            </div>
+        </div>
+        <div class="c_area">
+            <div class="left_list">
+                <div class="nav_title">拓展功能</div>
+                <div class="sidemenu">
+                    <ul>
+                        <li><a href={{ url_for("film.search") }}>电影搜索</a></li>
+                        <li><a href="http://202.201.123.198:8080/opac/search.php">图书馆检索系统</a></li>
+                        <li><a href={{ url_for("video.play") }}>小视屏</a></li>
+                        <li class="on"><a href={{ url_for(".about3") }}>联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <a href={{ url_for('.about3') }}><img src={{ url_for('static', filename="images/tel.jpg") }}/></a>
+                </div>
+            </div>
+            <div class="right_content">
+                <div class="con_title">团队简介</div>
+                <div class="con_box">
+                    <p>
+                        基于大数据的导向式助学平台，由北方民族大学大数据可视化团队搭建。
+                    </p>
+                    <p>
+                        页面模版来自源码之家。
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="friend_link">
+                <b>友情链接：</b><a href="" target="_blank">大数据研究中心</a><a href="" target="_blank">大数据团队</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

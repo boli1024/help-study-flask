@@ -1,0 +1,232 @@
+
+
+
+<h1>HTML5 拖放</h1>
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html/html5_geolocation.asp" title="HTML5 地理定位">HTML5 地理定位</a></li>
+<li class="next"><a href="/html/html5_webstorage.asp" title="HTML5 Web 存储">HTML5 Web 存储</a></li>
+</ul>
+</div>
+
+
+
+<div>
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="float:left; width:198px; height:66px; margin:10px; padding:0px; border:1px solid #aaaaaa;">
+<img style="margin:0; padding:10px;" id="drag1" src="/i/eg_dragdrop_w3school.gif"  draggable="true" ondragstart="drag(event)" id="drag1">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="float:left; width:198px; height:66px; margin:10px; padding:0px; border:1px solid #aaaaaa;"></div>
+
+<p style="clear:both; font-size:14px;" class="marked">请把 W3School 图片拖到矩形中。</p>
+</div>
+
+
+
+<div>
+<h2>拖放</h2>
+
+<p>拖放（Drag 和 Drop）是很常见的特性。它指的是您抓取某物并拖入不同的位置。</p>
+
+<p>拖放是 HTML5 标准的组成部分：任何元素都是可拖放的。</p>
+</div>
+
+
+
+<div>
+<h2>浏览器支持</h2>
+
+<p>表格中的数字指示了完全支持拖放的首个浏览器版本。</p>
+
+<table class="dataintable browsersupport">
+<tr>
+<td>API</td>
+<td class="bsChrome"></td>
+<td class="bsIE"></td>
+<td class="bsFirefox"></td>
+<td class="bsSafari"></td>
+<td class="bsOpera"></td>
+</tr>
+
+<tr>
+<td>拖放</td>
+<td>4.0</td>
+<td>9.0</td>
+<td>3.5</td>
+<td>6.0</td>
+<td>12.0</td>
+</tr>
+</table>
+</div>
+
+
+
+<div>
+<h2>HTML 拖放实例</h2>
+
+<p>下列是关于拖放的简单例子：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData(&quot;text&quot;, ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData(&quot;text&quot;);
+    ev.target.appendChild(document.getElementById(data));
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;div1&quot; ondrop=&quot;drop(event)&quot; ondragover=&quot;allowDrop(event)&quot;&gt;&lt;/div&gt;
+
+&lt;img id=&quot;drag1&quot; src=&quot;img_logo.gif&quot; draggable=&quot;true&quot; ondragstart=&quot;drag(event)&quot; width=&quot;336&quot; height=&quot;69&quot;&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html5_draganddrop">亲自试一试</a></p>
+
+<p>它也许看上去有点复杂，不过让我们研究一下拖放事件的所有不同部分。</p>
+</div>
+
+
+
+<div>
+<h2>把元素设置为可拖放</h2>
+
+<p>首先：为了把一个元素设置为可拖放，请把 draggable 属性设置为 true：</p>
+
+<pre>&lt;img draggable=&quot;true&quot;&gt;</pre>
+</div>
+
+
+
+<div>
+<h2>拖放的内容 - ondragstart 和 setData()</h2>
+
+<p>然后，规定当元素被拖动时发生的事情。</p>
+
+<p>在上面的例子中，ondragstart 属性调用了一个 drag(event) 函数，规定拖动什么数据。</p>
+
+<p>dataTransfer.setData() 方法设置被拖动数据的数据类型和值：</p>
+
+<pre>
+function drag(ev) {
+    ev.dataTransfer.setData(&quot;text&quot;, ev.target.id);
+}
+</pre>
+
+<p>在本例中，数据类型是 &quot;text&quot;，而值是这个可拖动元素的 id (&quot;drag1&quot;)。</p>
+</div>
+
+
+
+<div>
+<h2>拖到何处 - ondragover</h2>
+
+<p>ondragover 事件规定被拖动的数据能够被放置到何处。</p>
+
+<p>默认地，数据/元素无法被放置到其他元素中。为了实现拖放，我们必须阻止元素的这种默认的处理方式。</p>
+
+<p>这个任务由 ondragover 事件的 event.preventDefault() 方法完成：</p>
+
+<pre>event.preventDefault()</pre>
+</div>
+
+
+
+<div>
+<h2>进行放置 - ondrop</h2>
+
+<p>当放开被拖数据时，会发生 drop 事件。</p>
+
+<p>在上面的例子中，ondrop 属性调用了一个函数，drop(event)：</p>
+
+<pre>
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData(&quot;text&quot;);
+    ev.target.appendChild(document.getElementById(data));
+}
+</pre>
+
+<h3>代码解释：</h3>
+
+<ul>
+<li>调用 preventDefault() 来阻止数据的浏览器默认处理方式（drop 事件的默认行为是以链接形式打开）</li>
+<li>通过 dataTransfer.getData() 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据</li>
+<li>被拖数据是被拖元素的 id (&quot;drag1&quot;)</li>
+<li>把被拖元素追加到放置元素中</li>
+</ul>
+</div>
+
+
+
+<div class="example">
+<h2>更多实例</h2>
+
+<h3>来回拖放图片</h3>
+<p>如何在两个 &lt;div&gt; 元素之间来回拖放图像：</p>
+
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="float:left; width:198px; height:66px; margin:10px; padding:0px; border:1px solid #aaaaaa;">
+<img style="margin:0; padding:10px;" id="drag1" src="/i/eg_dragdrop_w3school.gif"  draggable="true" ondragstart="drag(event)" id="drag1">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="float:left; width:198px; height:66px; margin:10px; padding:0px; border:1px solid #aaaaaa;"></div>
+
+<p style="clear:both; font-size:14px;" class="marked">请把 W3School 图片拖到矩形中。</p>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html5_draganddrop2">亲自试一试</a></p>
+</div>
+
+
+

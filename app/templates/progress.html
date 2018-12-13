@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% block link_css %}
+    <style rel="stylesheet" type="text/css">
+        .right_content{
+        width: 1142px;
+        }
+        .con_title{
+            text-align: center;
+            color: #1ba0da;
+            font-size: 24px;
+            font-weight: bold;
+            height: 70px;
+            line-height: 70px;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <!--content-->
+    <div class="i_content">
+        <div class="adr_wrap">
+            <div class="adr">
+                <span class="adr_link"><a href={{ url_for(".index") }}>首   页</a>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;学习进度&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;进度查看</span>
+            </div>
+        </div>
+        <div class="c_area">
+            <div class="right_content">
+                <div class="con_title">当前进度: 40%</div>
+                <div class="con_box">
+                    <div id="echart" style="width: 1000px;height:600px;margin: 0 auto;"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="friend_link">
+                <b>友情链接：</b><a href="" target="_blank">大数据研究中心</a><a href="" target="_blank">大数据团队</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src={{ url_for('static', filename="js/echarts.min.js") }}></script>
+    <script type="text/javascript">
+
+        var myChart = echarts.init(document.getElementById('echart'));
+
+        var option = {
+            title: {
+                text: '学习进度'
+            },
+            tooltip: {
+                show: true,
+                //showContent: true,
+                trigger: 'axis',
+            },
+            legend: {
+                data: ['进度'],
+                orient: 'horizontal',// 布局方式，默认为水平布局，可选为：'horizontal' ¦ 'vertical'
+                itemGap: 10,// 各个item之间的间隔，单位px，默认为10，
+                            // 横向布局时为水平间隔，纵向布局时为纵向间隔
+                itemWidth: 20,// 图例图形宽度
+                itemHeight: 14,// 图例图形高度
+                textStyle: {
+                    color: '#333'// 图例文字颜色
+                }
+            },
+            toolbox: {
+                feature: {
+                    dataView: {
+                        iconStyle: {
+                            normal: {borderColor: '#d87f3f'}
+                        }
+                    },
+                    restore: {
+                        iconStyle: {
+                            normal: {
+                                borderColor: '#2a95ff'
+                            }
+                        }
+                    },
+                    magicType: {
+                        type: ['line', 'bar'],
+                        iconStyle: {
+                            normal: {
+                                borderColor: '#54c954'
+                            }
+                        }
+                    },
+                    //保存图片
+                    saveAsImage: {
+                        iconStyle: {
+                            normal: {
+                                borderColor: '#4b0082'
+                            }
+                        }
+                    }
+                },
+                right: '6%',
+                top: '0%'
+            },
+            calculable: true,
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Html', 'CSS', 'JavaScript', 'BootStrap', 'JQuery', 'Vue.js']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'time'
+                }
+            ],
+            series: [
+                {
+                    name: '理想进度',//曲线名，与图例名对应
+                    type: 'line',
+                    symbol: 'emptyCircle',//标记的图形,默认为空心圆。可选：circle, rect, roundRect, triangle, diamond, pin, arrow
+                    symbolSize: 8,//标记的大小
+                    showSymbol: true,//是否显示 symbol, 如果 false 则只有在 tooltip hover 的时候显示   true：时刻显示拐点   false：鼠标放上去显示
+                    data: ["2010-4-2", "2010-3-2", "2010-4-2", "2010-5-2", "2010-6-2", "2010-7-2"],//系列中的数据内容数组。数组项通常为具体的数据项
+                    label: {},//图形上的文本标签
+                    smooth: true,//是否使用平滑曲线
+                    markPoint: {
+                        data: [
+                            {name: '当前进度', value: '40%', xAxis: 'JavaScript', yAxis: 40}//标注点
+                        ]
+                    },
+                    //折线拐点标志的样式
+                    itemStyle: {
+                        normal: {
+                            color: '#1AB0FE',
+                            lineStyle: {
+                                color: '#1AB0FE'
+                            },
+                            label: {show: true}
+                        }
+                    },
+                    //区域填充样式
+                    areaStyle: {
+                        type: 'default',
+                        //填充渐变色
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(26, 176, 254,0.4)'
+                        }, {
+                            offset: 1,
+                            color: 'rgba(26, 176, 254,0.1)'
+                        }])
+                    }
+                },
+                {
+                    name: '实际进度',//曲线名，与图例名对应
+                    type: 'line',
+                    symbol: 'emptyCircle',//标记的图形,默认为空心圆。可选：circle, rect, roundRect, triangle, diamond, pin, arrow
+                    symbolSize: 8,//标记的大小
+                    showSymbol: true,//是否显示 symbol, 如果 false 则只有在 tooltip hover 的时候显示   true：时刻显示拐点   false：鼠标放上去显示
+                    data: ["2010-2-2", "2010-3-2", "2010-4-2", "2010-5-2", "2010-6-2", "2010-7-2"],//系列中的数据内容数组。数组项通常为具体的数据项
+                    label: {},//图形上的文本标签
+                    smooth: true,//是否使用平滑曲线
+                    markPoint: {
+                        data: [
+                            {name: '当前进度', value: '40%', xAxis: 'JavaScript', yAxis: 40}//标注点
+                        ]
+                    },
+                    //折线拐点标志的样式
+                    itemStyle: {
+                        normal: {
+                            color: '#1AB0FE',
+                            lineStyle: {
+                                color: 'red'
+                            },
+                            label: {show: true}
+                        }
+                    },
+                    //区域填充样式
+                    areaStyle: {
+                        type: 'default',
+                        //填充渐变色
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(26, 176, 254,0.4)'
+                        }, {
+                            offset: 1,
+                            color: 'rgba(26, 176, 254,0.1)'
+                        }])
+                    }
+                }
+            ]
+
+        }
+        myChart.setOption(option);
+    </script>
+{% endblock %}

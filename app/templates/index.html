@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block body %}
+<!--banner-->
+    <div class="banner">
+        <div class="bd">
+            <ul>
+                <li class="first"><a href="javascript:void(0);"></a></li>
+                <li class="second"><a href="javascript:void(0);"></a></li>
+                <li class="third"><a href="javascript:void(0);"></a></li>
+                <li class="fourth"><a href="javascript:void(0);"></a></li>
+                <li class="fifth"><a href="javascript:void(0);"></a></li>
+            </ul>
+        </div>
+        <div class="hd"><ul></ul></div>
+    </div>
+    <!--content-->
+    <div class="content">
+        <div class="left_tab">
+            <div class="hd">
+                <ul>
+                    {% if current_user.is_authenticated %}
+                        <li class="first">最近学习</li>
+                    {% endif %}
+                    <li class="second">岗位详情</li><li class="third">课程资源</li></ul>
+            </div>
+            <div class="bd">
+                {% if current_user.is_authenticated %}
+                <div class="box">
+                    <a href="about1.html" class="more">MORE+</a>
+                    <ul class="clearfix">
+                        <li><a href="about1.html"><img src={{ url_for('static', filename="images/direction/html.jpg") }} /><h4>html布局</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="about1.html"><img src={{ url_for('static', filename="images/direction/css.jpeg") }} /><h4>css基础</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="about1.html"><img src={{ url_for('static', filename="images/direction/python.jpg") }} /><h4>pthon基础</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="about1.html"><img src={{ url_for('static', filename="images/direction/html.jpg") }} /><h4>html div标签</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="about1.html"><img src={{ url_for('static', filename="images/direction/bootstrap.jpg") }} /><h4>bootstrap入门</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="about1.html"><img src={{ url_for('static', filename="images/direction/python.jpg") }} /><h4>python文件操作</h4><span class="date">2016-05-05</span></a></li>
+                    </ul>
+                </div>
+                {% endif %}
+                <div class="box">
+                    <a href={{ url_for(".direction") }} class="more">MORE+</a>
+                    <ul class="clearfix">
+                        <li><a href="secret.html"><img src={{ url_for('static', filename="images/direction/html.jpg") }} /><h4>前端开发</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="secret.html"><img src={{ url_for('static', filename="images/direction/java.jpg") }} /><h4>java开发</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="secret.html"><img src={{ url_for('static', filename="images/direction/UI.jpeg") }} /><h4>UI设计师</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="secret.html"><img src={{ url_for('static', filename="images/direction/php.jpg") }} /><h4>PHP</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="secret.html"><img src={{ url_for('static', filename="images/direction/python.jpg") }} /><h4>Python</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="secret.html"><img src={{ url_for('static', filename="images/direction/android.jpg") }} /><h4>Android</h4><span class="date">2016-05-05</span></a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <a href="news.html" class="more">MORE+</a>
+                    <ul class="clearfix">
+                        <li><a href="nDetail.html"><img src={{ url_for('static', filename="images/direction/html.jpg") }} /><h4>前端开发课程资源</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="nDetail.html"><img src={{ url_for('static', filename="images/direction/java.jpg") }} /><h4>java开发课程资源</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="nDetail.html"><img src={{ url_for('static', filename="images/direction/UI.jpeg") }} /><h4>UI设计师课程资源</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="nDetail.html"><img src={{ url_for('static', filename="images/direction/php.jpg") }} /><h4>PHP课程资源</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="nDetail.html"><img src={{ url_for('static', filename="images/direction/python.jpg") }} /><h4>Python课程资源</h4><span class="date">2016-05-05</span></a></li>
+                        <li><a href="nDetail.html"><img src={{ url_for('static', filename="images/direction/android.jpg") }} /><h4>Android课程资源</h4><span class="date">2016-05-05</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right_box">
+            <!--notice-->
+            <div class="notice">
+                <div class="n_title">
+                    <b>最新通知</b>
+                    <a href="notice.html">MORE+</a>
+                </div>
+                <div class="bd">
+                    <ul class="infoList">
+                        <li><a href="nDetail.html">HTML：新增视屏资源。</a><span class="date">2016-05-11</span></li>
+                        <li><a href="nDetail.html">Bootstrap：新增视屏资源。</a><span class="date">2016-05-11</span></li>
+                        <li><a href="nDetail.html">Bootstrap：新增教程。</a><span class="date">2016-05-11</span></li>
+                        <li><a href="nDetail.html">JQUery：新增视屏资源。</a><span class="date">2016-05-11</span></li>
+                        <li><a href="nDetail.html">Python：新增应用实例。</a><span class="date">2016-05-11</span></li>
+                        <li><a href="nDetail.html">Python：新增入门视屏教程。</a><span class="date">2016-05-11</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--code-->
+            <div class="code">
+                <img src={{ url_for('static', filename="images/er.jpg") }} />
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="friend_link">
+            <b>友情链接：</b><a href="" target="_blank">大数据研究中心</a><a href="" target="_blank">大数据团队</a>
+        </div>
+    </div>
+{% endblock %}

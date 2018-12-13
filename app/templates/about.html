@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block body %}
+    <!--content-->
+    <div class="i_content">
+        <div class="adr_wrap">
+            <div class="adr">
+                <span class="adr_link"><a href={{ url_for(".index") }}>首   页</a>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;助学系统&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;系统简介</span>
+            </div>
+        </div>
+        <div class="c_area">
+            <div class="left_list">
+                <div class="nav_title">助学系统</div>
+                <div class="sidemenu">
+                    <ul>
+                        <li class="on"><a href={{ url_for(".about") }}>系统简介</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <a href={{ url_for('.about3') }}><img src={{ url_for('static', filename="images/tel.jpg") }}/></a>
+                </div>
+            </div>
+            <div class="right_content">
+                <div class="con_title">系统简介</div>
+                <div class="con_box">
+                    <p>
+                        基于大数据的导向式助学平台，旨在搭建一个面向学生服务的在线学习平台。
+                    </p>
+                    <p>
+                        测试阶段主要用于计算机学院学生使用。
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="friend_link">
+                <b>友情链接：</b><a href="" target="_blank">大数据研究中心</a><a href="" target="_blank">大数据团队</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

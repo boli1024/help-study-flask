@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面1</title>
+</head>
+<body>
+{% if current_user.is_authenticated %}
+    <h2>你好，{{ current_user.username }}</h2><br>
+    <h2>学号:{{ current_user.number }}</h2><br>
+    <h2>密码:{{ current_user.password }}</h2><br>
+    {% if current_user.direction %}
+        <h2>岗位方向:{{ current_user.direction.name }}</h2><br>
+        <h2>方向计划:</h2><br>
+        {% for course in current_user.direction.courses.all() %}
+            <h2>{{ course.name }}:{{ course.cycle }}</h2>
+        {% endfor %}
+    {% endif %}
+    <span>&emsp;</span>
+    <a href="{{ url_for('auth.logout') }}">注销</a>
+{% else %}
+    <a href="{{ url_for('auth.login') }}">登录</a>
+    <span>&emsp;</span>
+    <a href="{{ url_for('auth.register') }}">注册</a>
+{% endif %}
+</body>
+</html>

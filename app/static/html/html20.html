@@ -1,0 +1,137 @@
+
+
+
+<h1>HTML 类</h1>
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html/html_blocks.asp" title="HTML &lt;div&gt; 和 &lt;span&gt;">HTML 块</a></li>
+<li class="next"><a href="/html/html_layout.asp" title="HTML 布局">HTML 布局</a></li>
+</ul>
+</div>
+
+
+<div>
+<p>对 HTML 进行分类（设置类），使我们能够为元素的类定义 CSS 样式。</p>
+
+<p>为相同的类设置相同的样式，或者为不同的类设置不同的样式。</p>
+
+<iframe src="/demo/html_classes_london.asp" width="500" height="330" style="margin:0; padding:0;"></iframe>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;cities&quot;&gt;
+&lt;h2&gt;London&lt;/h2&gt;
+&lt;p&gt;
+London is the capital city of England. 
+It is the most populous city in the United Kingdom, 
+with a metropolitan area of over 13 million inhabitants.
+&lt;/p&gt;
+&lt;/div&gt; 
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_classes_shanghai">亲自试一试</a></p>
+</div>
+
+
+<div>
+<h2>分类块级元素</h2>
+
+<p>HTML &lt;div&gt; 元素是<em>块级元素</em>。它能够用作其他 HTML 元素的容器。</p>
+
+<p>设置 &lt;div&gt; 元素的类，使我们能够为相同的 &lt;div&gt; 元素设置相同的类：</p>
+
+<iframe src="/demo/html_classes_cities.asp" width="500" height="1020" style="margin:0; padding:0;"></iframe>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class=&quot;cities&quot;&gt;
+&lt;h2&gt;London&lt;/h2&gt;
+&lt;p&gt;London is the capital city of England. 
+It is the most populous city in the United Kingdom, 
+with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;cities&quot;&gt;
+&lt;h2&gt;Paris&lt;/h2&gt;
+&lt;p&gt;Paris is the capital and most populous city of France.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;cities&quot;&gt;
+&lt;h2&gt;Tokyo&lt;/h2&gt;
+&lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+and the most populous metropolitan area in the world.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_classes_cities">亲自试一试</a></p>
+</div>
+
+
+<div>
+<h2>分类行内元素</h2>
+
+<p>HTML &lt;span&gt; 元素是行内元素，能够用作文本的容器。</p>
+
+<p>设置 &lt;span&gt; 元素的类，能够为相同的 &lt;span&gt; 元素设置相同的样式。</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+  span.red {color:red;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My &lt;span class=&quot;red&quot;&gt;Important&lt;/span&gt; Heading&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_classes_span">亲自试一试</a></p>
+</div>
+
+

@@ -1,0 +1,94 @@
+
+
+
+<h1>HTML Iframe</h1>
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html/html_frames.asp" title="HTML 框架">HTML 框架</a></li>
+<li class="next"><a href="/html/html_backgrounds.asp" title="HTML 背景">HTML 背景</a></li>
+</ul>
+</div>
+
+
+<div id="intro">
+<p><strong>iframe 用于在网页内显示网页。</strong></p>
+
+<iframe src="/html/index.asp" height="300px" width="99%" style="margin-top:15px;"></iframe>
+</div>
+
+
+<div>
+<h2>添加 iframe 的语法</h2>
+
+<pre>&lt;iframe src=&quot;<i>URL</i>&quot;&gt;&lt;/iframe&gt;</pre>
+
+<p><i>URL</i> 指向隔离页面的位置。</p>
+</div>
+
+
+<div>
+<h2>Iframe - 设置高度和宽度</h2>
+
+<p>height 和 width 属性用于规定 iframe 的高度和宽度。</p>
+
+<p>属性值的默认单位是像素，但也可以用百分比来设定（比如 &quot;80%&quot;）。</p>
+
+<h3>实例</h3>
+
+<pre>&lt;iframe src=&quot;demo_iframe.htm&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/iframe&gt;</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_iframe_height_width">亲自试一试</a></p>
+</div>
+
+
+<div>
+<h2>Iframe - 删除边框</h2>
+
+<p>frameborder 属性规定是否显示 iframe 周围的边框。</p>
+
+<p>设置属性值为 &quot;0&quot; 就可以移除边框：</p>
+
+<h3>实例</h3>
+
+<pre>&lt;iframe src=&quot;demo_iframe.htm&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_iframe_frameborder">亲自试一试</a></p>
+</div>
+
+
+<div>
+<h2>使用 iframe 作为链接的目标</h2>
+
+<p>iframe 可用作链接的目标（target）。</p>
+
+<p>链接的 target 属性必须引用 iframe 的 name 属性：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;iframe src=&quot;demo_iframe.htm&quot; <code>name=&quot;iframe_a&quot;</code>&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.w3school.com.cn&quot; <span class="marked">target=&quot;iframe_a&quot;</span>&gt;W3School.com.cn&lt;/a&gt;&lt;/p&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_iframe_target">亲自试一试</a></p>
+</div>
+
+
+<div>
+<h2>HTML iframe 标签</h2>
+
+<table class="dataintable">
+<tr>
+<th style="width:30%;">标签</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td><a href="/tags/tag_iframe.asp" title="HTML &lt;iframe&gt; 标签">&lt;iframe&gt;</a></td>
+<td>定义内联的子窗口（框架）</td>
+</tr>
+</table>
+</div>
+
+

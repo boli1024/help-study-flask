@@ -1,0 +1,160 @@
+
+
+
+<h1>HTML 表单元素</h1>
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html/html_forms.asp" title="HTML 表单和输入">HTML 表单</a></li>
+<li class="next"><a href="/html/html_form_input_types.asp" title="HTML Input 类型">HTML 输入类型</a></li>
+</ul>
+</div>
+
+
+
+
+<div id="intro">
+<p><strong>本章描述所有 HTML 表单元素。</strong></p>
+</div>
+
+
+
+
+<div>
+<h2>&lt;input&gt; 元素</h2>
+
+<p>最重要的表单元素是 <em>&lt;input&gt;</em> 元素。</p>
+
+<p>&lt;input&gt; 元素根据不同的 <em>type</em> 属性，可以变化为多种形态。</p>
+
+<p class="note"><span>注释：</span>下一章讲解所有 HTML 输入类型。</p>
+</div>
+
+
+
+
+<div>
+<h2>&lt;select&gt; 元素（下拉列表）</h2>
+
+<p><em>&lt;select&gt;</em> 元素定义<em>下拉列表</em>：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;select name=&quot;cars&quot;&gt;
+&lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+&lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+&lt;option value=&quot;fiat&quot;&gt;Fiat&lt;/option&gt;
+&lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_elements_select">亲自试一试</a></p>
+
+<p><em>&lt;option&gt;</em> 元素定义待选择的选项。</p>
+
+<p>列表通常会把首个选项显示为被选选项。</p>
+
+<p>您能够通过添加 selected 属性来定义预定义选项。</p>
+
+<h3>实例</h3>
+
+<pre>&lt;option value=&quot;fiat&quot; selected&gt;Fiat&lt;/option&gt;</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_elements_select_pre">亲自试一试</a></p>
+</div>
+
+
+
+
+<div>
+<h2>&lt;textarea&gt; 元素</h2>
+
+<p><em>&lt;textarea&gt;</em> 元素定义多行输入字段（<em>文本域</em>）：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;textarea name=&quot;message&quot; rows=&quot;10&quot; cols=&quot;30&quot;&gt;
+The cat was playing in the garden.
+&lt;/textarea&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_headers">亲自试一试</a></p>
+
+<p>以上 HTML 代码在浏览器中显示为：</p>
+
+<pre>The cat was playing in the garden.</pre>
+</div>
+
+
+
+
+<div>
+<h2>&lt;button&gt; 元素</h2>
+
+<p><em>&lt;button&gt;</em> 元素定义可点击的<em>按钮</em>：</p>
+
+<h3>实例</h3>
+
+<pre>&lt;button type=&quot;button&quot; onclick=&quot;alert('Hello World!')&quot;&gt;Click Me!&lt;/button&gt;</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_elements_button">亲自试一试</a></p>
+
+<p>以上 HTML 代码在浏览器中显示为：</p>
+
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+</div>
+
+
+
+
+<div>
+<h2>HTML5 表单元素</h2>
+
+<p>HTML5 增加了如下表单元素：</p>
+
+<ul>
+<li>&lt;datalist&gt;</li>
+<li>&lt;keygen&gt;</li>
+<li>&lt;output&gt;</li>
+</ul>
+
+<p class="note"><span>注释：</span>默认地，浏览器不会显示未知元素。新元素不会破坏您的页面。</p>
+</div>
+
+
+
+
+<div>
+<h2>HTML5 &lt;datalist&gt; 元素</h2>
+
+<p><em>&lt;datalist&gt;</em> 元素为 &lt;input&gt; 元素规定预定义选项列表。</p>
+
+<p>用户会在他们输入数据时看到预定义选项的下拉列表。</p>
+
+<p>&lt;input&gt; 元素的 <em>list</em> 属性必须引用 &lt;datalist&gt; 元素的 <em>id</em> 属性。</p>
+
+<h3>实例</h3>
+
+<p>通过 &lt;datalist&gt; 设置预定义值的 &lt;input&gt; 元素：</p>
+
+<pre>
+&lt;form action=&quot;action_page.php&quot;&gt;
+&lt;input list=&quot;browsers&quot;&gt;
+&lt;datalist id=&quot;browsers&quot;&gt;
+   &lt;option value=&quot;Internet Explorer&quot;&gt;
+   &lt;option value=&quot;Firefox&quot;&gt;
+   &lt;option value=&quot;Chrome&quot;&gt;
+   &lt;option value=&quot;Opera&quot;&gt;
+   &lt;option value=&quot;Safari&quot;&gt;
+&lt;/datalist&gt; 
+&lt;/form&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_elements_datalist">亲自试一试</a></p>
+</div>
+
+
+
+

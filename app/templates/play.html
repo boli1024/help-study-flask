@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block body %}
+    <!--content-->
+    <div class="i_content">
+        <div class="adr_wrap">
+            <div class="adr">
+                <span class="adr_link"><a href={{ url_for(".index") }}>首   页</a>&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;拓展功能&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;小视频</span>
+            </div>
+        </div>
+        <div class="c_area">
+            <div class="left_list">
+                <div class="nav_title">视屏列表</div>
+                <div class="sidemenu">
+                    <ul>
+                        <li><a name="video1" href="javascript:;" onclick="javascript:getname(this)">建房子</a></li>
+                        <li><a name="video2" href="javascript:;" onclick="javascript:getname(this)">格鲁片段</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <a href={{ url_for('.about3') }}><img src={{ url_for('static', filename="images/tel.jpg") }}/></a>
+                </div>
+            </div>
+            <div class="right_content">
+                <div class="con_title">视屏播放</div>
+                <div class="con_box">
+                    <video id="video" width="800" height="540" controls="controls">
+                        <source id="src" src={{ url_for('static', filename="video/video1.mp4") }} type="video/mp4">
+                    </video>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="friend_link">
+                <b>友情链接：</b><a href="" target="_blank">大数据研究中心</a><a href="" target="_blank">大数据团队</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src={{ url_for("static", filename="js/function.js") }}></script>
+{% endblock %}

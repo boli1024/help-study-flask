@@ -1,0 +1,119 @@
+
+
+
+<h1>HTML URL 字符编码</h1>
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html/html_url.asp" title="HTML 统一资源定位器">HTML URL</a></li>
+<li class="next"><a href="/html/html_webserver.asp" title="HTML Web 服务器">HTML Web 服务器</a></li>
+</ul>
+</div>
+
+
+<div id="intro">
+<p><strong>URL 编码会将字符转换为可通过因特网传输的格式。</strong></p>
+</div>
+
+
+<div>
+<h2>URL - 统一资源定位器</h2>
+
+<p>Web 浏览器通过 URL 从 web 服务器请求页面。</p>
+
+<p>URL 是网页的地址，比如 <em>http://www.w3school.com.cn</em>。</p>
+</div>
+
+
+<div>
+<h2>URL 编码</h2>
+
+<p>URL 只能使用 <a href="/tags/html_ref_ascii.asp" title="HTML ASCII 参考手册">ASCII 字符集</a>来通过因特网进行发送。</p>
+
+<p>由于 URL 常常会包含 ASCII 集合之外的字符，URL 必须转换为有效的 ASCII 格式。</p>
+
+<p>URL 编码使用 &quot;%&quot; 其后跟随两位的十六进制数来替换非 ASCII 字符。</p>
+
+<p>URL 不能包含空格。URL 编码通常使用 + 来替换空格。</p>
+</div>
+
+
+<div>
+<h2>亲自试一试</h2>
+
+<p>如果您点击下面的“提交”按钮，浏览器会在发送输入之前对其进行 URL 编码。服务器上的页面会显示出接收到的输入。</p>
+
+<form name="input" target="_blank" action="/example/html/form_action.asp" method="get" style="margin-top:15px;">
+<input type="text" name="text" size="30" />
+<input type="submit" value="Submit" />
+</form>
+
+<p>试着输入一些字符，然后再次点击提交按钮。</p>
+</div>
+
+
+<div>
+<h2>URL 编码示例</h2>
+
+<table class="dataintable">
+<tr>
+<th>字符</th>
+<th>URL 编码</th>
+</tr>
+
+<tr>
+<td>&euro;</td>
+<td>%80</td>
+</tr>
+
+<tr>
+<td>&pound;</td>
+<td>%A3</td>
+</tr>
+
+<tr>
+<td>&copy;</td>
+<td>%A9</td>
+</tr>
+
+<tr>
+<td>&reg;</td>
+<td>%AE</td>
+</tr>
+
+<tr>
+<td>&Agrave;</td>
+<td>%C0</td>
+</tr>
+
+<tr>
+<td>&Aacute;</td>
+<td>%C1</td>
+</tr>
+
+<tr>
+<td>&Acirc;</td>
+<td>%C2</td>
+</tr>
+
+<tr>
+<td>&Atilde;</td>
+<td>%C3</td>
+</tr>
+
+<tr>
+<td>&Auml;</td>
+<td>%C4</td>
+</tr>
+
+<tr>
+<td>&Aring;</td>
+<td>%C5</td>
+</tr>
+
+</table>
+
+<p>如需完整的 URL 编码参考，请访问我们的 <a href="/tags/html_ref_urlencode.html" title="HTML URL 编码">URL 编码参考手册</a>。</p>
+</div>
+
+

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>电影搜索</title>
+</head>
+<body>
+	<form action={{ url_for("film.result") }} method="post">
+		<p>请输入电影名进行搜索:</p>
+		<input type="text" name="filmname" />
+		<p><input type="submit" value="搜索" /></p>
+	</form>
+</body>
+</html>

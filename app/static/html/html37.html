@@ -1,0 +1,104 @@
+
+
+
+<h1>XHTML - 元素</h1>
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html/html_xhtml.asp" title="XHTML 简介">XHTML 简介</a></li>
+<li class="next"><a href="/html/html_xhtml_attributes.asp" title="XHTML - 属性">XHTML 属性</a></li>
+</ul>
+</div>
+
+
+<div id="intro">
+<p><strong>XHTML 元素是以 XML 格式编写的 HTML 元素。</strong></p>
+</div>
+
+
+<div>
+<h2>XHTML 元素 - 语法规则</h2>
+
+<ul>
+<li>XHTML 元素必须<em>正确嵌套</em></li>
+<li>XHTML 元素必须始终<em>关闭</em></li>
+<li>XHTML 元素必须<em>小写</em></li>
+<li>XHTML 文档必须有<em>一个根元素</em></li>
+</ul>
+</div>
+
+
+<div>
+<h2>XHTML 元素必须正确嵌套</h2>
+
+<p>在 HTML 中，某些元素可以不正确地彼此嵌套在一起，就像这样：</p>
+
+<pre>&lt;b&gt;&lt;i&gt;This text is bold and italic&lt;/b&gt;&lt;/i&gt;</pre>
+
+<p>在 XHTML 中，所有元素必须正确地彼此嵌套，就像这样：</p>
+
+<pre>&lt;b&gt;&lt;i&gt;This text is bold and italic&lt;/i&gt;&lt;/b&gt;</pre>
+</div>
+
+
+<div>
+<h2>XHTML 元素必须始终关闭</h2>
+
+<p>这是错误的：</p>
+
+<pre>
+&lt;p&gt;This is a paragraph
+&lt;p&gt;This is another paragraph
+</pre>
+
+<p>这是正确的：</p>
+
+<pre>
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;p&gt;This is another paragraph&lt;/p&gt;
+</pre>
+</div>
+
+
+<div>
+<h2>空元素也必须关闭</h2>
+
+<p>这是错误的：</p>
+
+<pre>
+A break: &lt;br&gt;
+A horizontal rule: &lt;hr&gt;
+An image: &lt;img src=&quot;happy.gif&quot; alt=&quot;Happy face&quot;&gt;
+</pre>
+
+<p>这是正确的：</p>
+
+<pre>
+A break: &lt;br /&gt;
+A horizontal rule: &lt;hr /&gt;
+An image: &lt;img src=&quot;happy.gif&quot; alt=&quot;Happy face&quot; /&gt;
+</pre>
+</div>
+
+
+<div>
+<h2>XHTML 元素必须小写</h2>
+
+<p>这是错误的：</p>
+
+<pre>
+&lt;BODY&gt;
+&lt;P&gt;This is a paragraph&lt;/P&gt;
+&lt;/BODY&gt;
+</pre>
+
+<p>这是正确的：</p>
+
+<pre>
+&lt;body&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/body&gt;
+</pre>
+</div>
+
+

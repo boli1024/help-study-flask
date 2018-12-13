@@ -1,0 +1,235 @@
+
+
+
+<h1>HTML 引用</h1>
+
+<div id="tpn">
+<ul class="prenext">
+<li class="pre"><a href="/html/html_formatting.asp" title="HTML 文本格式化">HTML 格式化</a></li>
+<li class="next"><a href="/html/html_computercode_elements.asp" title="HTML 链接">HTML 计算机代码</a></li>
+</ul>
+</div>
+
+
+
+<div>
+<h2>引用（Quotation）</h2>
+
+<p>这是摘自 WWF 网站的引文：</p>
+
+<blockquote>
+五十年来，WWF 一直致力于保护自然界的未来。 世界领先的环保组织，WWF 工作于 100 个国家，并得到美国一百二十万会员及全球近五百万会员的支持。
+</blockquote>
+</div>
+
+
+
+<div>
+<h2>HTML &lt;q&gt; 用于短的引用</h2>
+
+<p>HTML <em>&lt;q&gt;</em> 元素定义<em>短的引用</em>。</p>
+
+<p>浏览器通常会为 &lt;q&gt; 元素包围<em>引号</em>。</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;p&gt;WWF 的目标是：&lt;q&gt;构建人与自然和谐共存的世界。&lt;/q&gt;&lt;/p&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_quotation_q">亲自试一试</a></p>
+</div>
+
+
+
+<div>
+<h2>用于长引用的 HTML &lt;blockquote&gt;</h2>
+
+<p>HTML <em>&lt;blockquote&gt;</em> 元素定义被引用的节。</p>
+
+<p>浏览器通常会对 &lt;blockquote&gt; 元素进行<em>缩进</em>处理。</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;p&gt;以下内容引用自 WWF 的网站：&lt;/p&gt;
+&lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;
+五十年来，WWF 一直致力于保护自然界的未来。
+世界领先的环保组织，WWF 工作于 100 个国家，
+并得到美国一百二十万会员及全球近五百万会员的支持。
+&lt;/blockquote&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_quotation_blockquote">亲自试一试</a></p>
+</div>
+
+
+
+<div>
+<h2>用于缩略词的 HTML &lt;abbr&gt;</h2>
+
+<p>HTML <em>&lt;abbr&gt;</em> 元素定义<em>缩写</em>或首字母缩略语。</p>
+
+<p>对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息。</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;p&gt;&lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; 成立于 1948 年。&lt;/p&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_formatting_abbr">亲自试一试</a></p>
+</div>
+
+
+
+<div>
+<h2>用于定义的 HTML &lt;dfn&gt;</h2>
+
+<p>HTML <em>&lt;dfn&gt;</em> 元素定义项目或缩写的<em>定义</em>。</p>
+
+<p>&lt;dfn&gt; 的用法，按照 HTML5 标准中的描述，有点复杂：</p>
+
+<p>1. 如果设置了 &lt;dfn&gt; 元素的 title 属性，则定义项目：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;p&gt;&lt;dfn title=&quot;World Health Organization&quot;&gt;WHO&lt;/dfn&gt; 成立于 1948 年。&lt;/p&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_formatting_dfn">亲自试一试</a></p>
+
+<p>2. 如果 &lt;dfn&gt; 元素包含具有标题的 &lt;abbr&gt; 元素，则 title 定义项目：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;p&gt;&lt;dfn&gt;&lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt;&lt;/dfn&gt; 成立于 1948 年。&lt;/p&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_formatting_dfn_2">亲自试一试</a></p>
+
+<p>3. 否则，&lt;dfn&gt; 文本内容即是项目，并且父元素包含定义。</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;p&gt;&lt;dfn&gt;WHO&lt;/dfn&gt; World Health Organization 成立于 1948 年。&lt;/p&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_formatting_dfn_3">亲自试一试</a></p>
+
+<p class="note"><span>注释：</span>如果您希望简而化之，请使用第一条，或使用 &lt;abbr&gt; 代替。</p>
+</div>
+
+
+
+<div>
+<h2>用于联系信息的 HTML &lt;address&gt;</h2>
+
+<p>HTML <em>&lt;address&gt;</em> 元素定义文档或文章的联系信息（作者/拥有者）。</p>
+
+<p>此元素通常以<em>斜体</em>显示。大多数浏览器会在此元素前后添加折行。</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;address&gt;
+Written by Donald Duck.&lt;br&gt; 
+Visit us at:&lt;br&gt;
+Example.com&lt;br&gt;
+Box 564, Disneyland&lt;br&gt;
+USA
+&lt;/address&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_formatting_address">亲自试一试</a></p>
+</div>
+
+
+
+<div>
+<h2>用于著作标题的 HTML &lt;cite&gt;</h2>
+
+<p>HTML <em>&lt;cite&gt;</em> 元素定义<em>著作的标题</em>。</p>
+
+<p>浏览器通常会以斜体显示 &lt;cite&gt; 元素。</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edward Munch. Painted in 1893.&lt;/p&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_formatting_cite">亲自试一试</a></p>
+</div>
+
+
+
+<div>
+<h2>用于双向重写的 HTML &lt;bdo&gt;</h2>
+
+<p>HTML <em>&lt;bdo&gt;</em> 元素定义双流向覆盖（bi-directional override）。</p>
+
+<p>&lt;bdo&gt; 元素用于覆盖当前文本方向：</p>
+
+<h3>实例</h3>
+
+<pre>
+&lt;bdo dir=&quot;rtl&quot;&gt;This text will be written from right to left&lt;/bdo&gt;
+</pre>
+
+<p class="tiy"><a target="_blank" href="/tiy/t.asp?f=html_formatting_bdo">亲自试一试</a></p>
+</div>
+
+
+
+<div>
+<h2>HTML 引文、引用和定义元素</h2>
+
+<table class="dataintable">
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>&lt;abbr&gt;</td>
+<td>定义缩写或首字母缩略语。</td>
+</tr>
+
+<tr>
+<td>&lt;address&gt;</td>
+<td>定义文档作者或拥有者的联系信息。</td>
+</tr>
+
+<tr>
+<td>&lt;bdo&gt;</td>
+<td>定义文本方向。</td>
+</tr>
+
+<tr>
+<td>&lt;blockquote&gt;</td>
+<td>定义从其他来源引用的节。</td>
+</tr>
+
+<tr>
+<td>&lt;dfn&gt;</td>
+<td>定义项目或缩略词的定义。</td>
+</tr>
+
+<tr>
+<td>&lt;q&gt;</td>
+<td>定义短的行内引用。</td>
+</tr>
+
+<tr>
+<td>&lt;cite&gt;</td>
+<td>定义著作的标题。</td>
+</tr>
+</table>
+</div>
+
+
+
