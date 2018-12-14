@@ -27,6 +27,8 @@ def create_app(config_name):
     from .routes.test import test as route_test
     from .routes.manage_student import main as route_manage_student
     from .routes.manage_direction import main as route_manage_direction
+    from .routes.student import main as route_student
+    app.register_blueprint(route_student, url_prefix='/student')
     app.register_blueprint(route_manage_student, url_prefix='/studentManage')
     app.register_blueprint(route_manage_direction, url_prefix='/directionManage')
     app.register_blueprint(route_project, url_prefix='')

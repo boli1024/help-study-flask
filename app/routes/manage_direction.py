@@ -4,7 +4,7 @@ from app.form.direction_manage_form import CreateForm
 from app import db
 
 
-main = Blueprint('direction', __name__)
+main = Blueprint('directionManage', __name__)
 
 
 @main.route('/', methods=['GET'])

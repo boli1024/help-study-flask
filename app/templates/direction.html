@@ -1,4 +1,16 @@
 {% extends "base.html" %}
+{% block link_css %}
+    <style>
+        .myButton{
+            position: absolute;
+            left: 80%;
+            top: 11px;
+        }
+    .myLi{
+        position: relative;
+    }
+    </style>
+{% endblock %}
 {% block body %}
     <!--content-->
     <div class="i_content">
@@ -12,22 +24,22 @@
                 <div class="nav_title">岗位列表</div>
                 <div class="sidemenu">
                     <ul>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">前端开发</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">java开发</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">UI设计师</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">PHP</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">Python</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">Android</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">美工</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">深度学习</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">算法工程师</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">Hadoop</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">Node.js</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">大数据开发</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">数据分析师</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">数据架构</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">人工智能</a></li>
-                        <li><a href="javascript:;" onclick="javascript:change(this)">区块链</a></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">前端开发</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=1) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">java开发</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=2) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">UI设计师</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=3) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">PHP</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=4) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">Python</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=5) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">Android</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=6) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">美工</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=7) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">深度学习</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=8) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">算法工程师</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=9) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">Hadoop</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=10) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">Node.js</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=11) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">大数据开发</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=12) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">数据分析师</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=13) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">数据架构</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=14) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">人工智能</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=15) }}')">选择</button></li>
+                        <li class="myLi"><a href="javascript:;" onclick="javascript:change(this)">区块链</a><button class="myButton" onclick="window.open('{{ url_for("student.set_direction",id=16) }}')">选择</button></li>
 
                     </ul>
                 </div>

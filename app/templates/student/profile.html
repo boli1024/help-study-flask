@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生个人资料页</title>
+</head>
+<body>
+{% if current_user.is_authenticated %}
+    <h2>姓名：{{ current_user.username }}</h2>
+    <h2>学号：{{ current_user.number }}</h2>
+    <h2>密码：{{ current_user.password }}</h2>
+    <h2>岗位方向：{{ current_user.direction.name }}</h2>
+{% endif %}
+</body>
+</html>

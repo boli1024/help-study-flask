@@ -36,11 +36,11 @@
     <div class="col-md-12">
         <div class="page-header">岗位管理</div>
         <ul class="nav nav-tabs">
-            <li><a href="{{ url_for('direction.directions') }}">岗位列表</a></li>
+            <li><a href="{{ url_for('directionManage.directions') }}">岗位列表</a></li>
             <li><a href="">岗位搜索</a></li>
             <li class="active"><a>岗位添加</a></li>
         </ul>
-        <form action="{{ url_for('direction.add') }}" method="post" class="form-horizontal" role="form">
+        <form action="{{ url_for('directionManage.add') }}" method="post" class="form-horizontal" role="form">
             {{ form.csrf_token }}
             <div class="form-group">
                 {{ form.id.label }}

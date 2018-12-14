@@ -2,7 +2,7 @@ from flask import Blueprint, render_template
 from app.models import User
 
 
-main = Blueprint("student", __name__)
+main = Blueprint("studentManage", __name__)
 
 
 @main.route("/", methods=['GET'])
