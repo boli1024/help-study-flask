@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息闪现测试</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-danger">{{ message }}</div>
+{% endfor %}
+
+</body>
+</html>

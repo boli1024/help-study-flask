@@ -20,7 +20,6 @@ def directions():
 def add():
     create_form = CreateForm()
     if request.method == 'POST' and create_form.validate():
-        print("验证成功")
         id = create_form.id.data
         name = create_form.name.data
         content = create_form.content.data

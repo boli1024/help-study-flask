@@ -6,5 +6,3 @@ class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), index=True)
     cycle = db.Column(db.Integer)
-
-    directionId = db.Column(db.Integer, db.ForeignKey('direction.id'))

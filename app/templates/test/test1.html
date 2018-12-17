@@ -12,11 +12,14 @@
     {% if current_user.direction %}
         <h2>岗位方向:{{ current_user.direction.name }}</h2><br>
         <h2>方向计划:</h2><br>
-        {% for course in current_user.direction.courses.all() %}
-            <h2>{{ course.name }}:{{ course.cycle }}</h2>
+        {% for plan in current_user.plans.all() %}
+            <h2>名称：{{ plan.directionDetail.name }}  开始时间：{{ plan.beginTime }}  结束时间:{{ plan.endTime }}  总时间:{{ plan.days }}</h2>
         {% endfor %}
+    {% else %}
+        <h2 style="color: red">未选择方向</h2>
     {% endif %}
     <span>&emsp;</span>
+{#    <h1>循环引用测试：用户 -》方向 -》用户.用户名{{ current_user.plans }}</h1>#}
     <a href="{{ url_for('auth.logout') }}">注销</a>
 {% else %}
     <a href="{{ url_for('auth.login') }}">登录</a>

@@ -19,7 +19,7 @@
 				<span class="welcome">欢迎您访问北方民族大学助学系统！</span>
 				<div class="corner">
                     {% if current_user.is_authenticated %}
-                        <a>你好，{{ current_user.username }}</a>
+                        <a>你好，{{ current_user.username }}{% if current_user.role == 1 %}同学{% endif %}{% if current_user.role == 2 %}教师{% endif %}{% if current_user.role == 3 %}管理员{% endif %}</a>
                         <span>&emsp;</span>
                         <a href="{{ url_for('student.profile') }}">个人资料</a>
                         <span>&emsp;</span>
