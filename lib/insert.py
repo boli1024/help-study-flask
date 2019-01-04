@@ -37,11 +37,11 @@ V8引擎执行Javascript的速度非常快，性能非常好。   Node.js是一�
     dir16 = Direction(name="区块链", content="""区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式。所谓共识机制是区块链系统中实现不同节点之间建立信任、获取权益的数学算法   。
 区块链（Blockchain）是比特币的一个重要概念，它本质上是一个去中心化的数据库，同时作为比特币的底层技术。区块链是一串使用密码学方法相关联产生的数据块，每一个数据块中包含了一次比特币网络交易的信息，用于验证其信息的有效性（防伪）和生成下一个区块。""")
 
-    u1 = User(username="白伟伟", number="20162163", password="20162163", direction=dir1, role=1)
-    u2 = User(username="张三", number="20162164", password="20162164", direction=dir2, role=1)
-    u3 = User(username="李四", number="20162165", password="20162165", direction=dir3, role=1)
-    u4 = User(username="王五", number="20162166", password="20162166", direction=dir4, role=1)
-    u5 = User(username="赵柳", number="20162167", password="20162167", direction=dir5, role=1)  # 五个学生
+    u1 = User(username="白伟伟", number="20162163", password="20162163", role=1)
+    u2 = User(username="张三", number="20162164", password="20162164", role=1)
+    u3 = User(username="李四", number="20162165", password="20162165", role=1)
+    u4 = User(username="王五", number="20162166", password="20162166", role=1)
+    u5 = User(username="赵柳", number="20162167", password="20162167", role=1)  # 五个学生
 
     t1 = User(username="白静", number="ls20120001", password="123456", role=2)
     t2 = User(username="王海", number="ls20120002", password="123456", role=2)   # 两个教师
@@ -53,10 +53,10 @@ V8引擎执行Javascript的速度非常快，性能非常好。   Node.js是一�
     # c5 = Course(name="jquery", cycle=20, direction=dir1)
     # c6 = Course(name="jsp", cycle=20, direction=dir3)
 
-    d1 = DirectionDetail(name='html', weight=20, direction=dir1)
-    d2 = DirectionDetail(name='css', weight=20, direction=dir1)
+    d1 = DirectionDetail(name='html', weight=10, direction=dir1)
+    d2 = DirectionDetail(name='css', weight=10, direction=dir1)
     d3 = DirectionDetail(name='js', weight=20, direction=dir1)
-    d4 = DirectionDetail(name='jquery', weight=20, direction=dir1)
+    d4 = DirectionDetail(name='jquery', weight=40, direction=dir1)
     d5 = DirectionDetail(name='bootstrap', weight=20, direction=dir1)    # 方向细节
 
     # p1 = Plan(user=u1, directionDetail=d1)

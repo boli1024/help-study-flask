@@ -19,7 +19,7 @@ class User(UserMixin, db.Model):
     endStudyTime = db.Column(db.String(10))
     studyDays = db.Column(db.Integer)  # 学习天数,当学生选择岗位方向时自动设置
 
-    studyTimeTag = db.Column(db.Integer)  # 学习时间是否设置的标记，1 已设置   0 未设置
+    studyTimeTag = db.Column(db.Integer, default=0)  # 学习时间是否设置的标记，1 已设置   0 未设置
 
     role = db.Column(db.Integer, nullable=False)  # 1.学生 2.教师 3.管理员
 

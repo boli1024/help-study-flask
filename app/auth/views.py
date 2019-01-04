@@ -15,6 +15,7 @@ def login():
             login_user(user)
             if user.studyTimeTag == 0:
                 user.set_study_time()
+                user.studyTimeTag = 1
             return redirect(url_for('project.index'))
     return render_template('auth/login.html', form=form)
 

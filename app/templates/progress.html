@@ -37,7 +37,62 @@
         </div>
     </div>
     <script type="text/javascript" src={{ url_for('static', filename="js/echarts.min.js") }}></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
     <script type="text/javascript">
+        function getDirectionDetails() {
+            var lis;
+            $.get({
+                url:"http://127.0.0.1:5000/student/getDirectionDetails",
+                data:{},
+                async:false,
+                success:function (data) {
+                    var l = JSON.parse(data);
+                    lis = l;
+                }
+            });
+            return lis;
+        }
+
+        function getIdealPlanDate(){
+            var l;
+            $.get({
+                url: "http://127.0.0.1:5000/student/getIdealPlanDate",
+                data: {},
+                async: false,
+                error: function () {
+                    alert("请求失败"+url);
+                },
+                success: function (data) {
+                    l = JSON.parse(data);
+                }
+            });
+            return l;
+        }
+
+        function getActualPlanDate(){
+            var l;
+            $.get({
+                url: "http://127.0.0.1:5000/student/getActualPlanDate",
+                data: {},
+                async: false,
+                error: function () {
+                    alert("请求数据失败"+url);
+                },
+                success: function (data) {
+                    l = JSON.parse(data);
+                }
+            });
+            return l;
+        }
+
+        let data = getDirectionDetails();
+        data.splice(0,0,'开始学习');
+
+        let idealPlanDate = getIdealPlanDate();
+        console.log(idealPlanDate);
+
+        let actualPlanDate = getActualPlanDate();
+        console.log(actualPlanDate);
 
         var myChart = echarts.init(document.getElementById('echart'));
 
@@ -51,7 +106,7 @@
                 trigger: 'axis',
             },
             legend: {
-                data: ['进度'],
+                data: ['理想进度','实际进度'],
                 orient: 'horizontal',// 布局方式，默认为水平布局，可选为：'horizontal' ¦ 'vertical'
                 itemGap: 10,// 各个item之间的间隔，单位px，默认为10，
                             // 横向布局时为水平间隔，纵向布局时为纵向间隔
@@ -100,7 +155,7 @@
                 {
                     type: 'category',
                     boundaryGap: false,
-                    data: ['Html', 'CSS', 'JavaScript', 'BootStrap', 'JQuery', 'Vue.js']
+                    data: data
                 }
             ],
             yAxis: [
@@ -115,7 +170,7 @@
                     symbol: 'emptyCircle',//标记的图形,默认为空心圆。可选：circle, rect, roundRect, triangle, diamond, pin, arrow
                     symbolSize: 8,//标记的大小
                     showSymbol: true,//是否显示 symbol, 如果 false 则只有在 tooltip hover 的时候显示   true：时刻显示拐点   false：鼠标放上去显示
-                    data: ["2010-4-2", "2010-3-2", "2010-4-2", "2010-5-2", "2010-6-2", "2010-7-2"],//系列中的数据内容数组。数组项通常为具体的数据项
+                    data: idealPlanDate,//系列中的数据内容数组。数组项通常为具体的数据项
                     label: {},//图形上的文本标签
                     smooth: true,//是否使用平滑曲线
                     markPoint: {
@@ -152,7 +207,7 @@
                     symbol: 'emptyCircle',//标记的图形,默认为空心圆。可选：circle, rect, roundRect, triangle, diamond, pin, arrow
                     symbolSize: 8,//标记的大小
                     showSymbol: true,//是否显示 symbol, 如果 false 则只有在 tooltip hover 的时候显示   true：时刻显示拐点   false：鼠标放上去显示
-                    data: ["2010-2-2", "2010-3-2", "2010-4-2", "2010-5-2", "2010-6-2", "2010-7-2"],//系列中的数据内容数组。数组项通常为具体的数据项
+                    data: actualPlanDate,//系列中的数据内容数组。数组项通常为具体的数据项
                     label: {},//图形上的文本标签
                     smooth: true,//是否使用平滑曲线
                     markPoint: {
@@ -163,7 +218,7 @@
                     //折线拐点标志的样式
                     itemStyle: {
                         normal: {
-                            color: '#1AB0FE',
+                            color: 'red',
                             lineStyle: {
                                 color: 'red'
                             },

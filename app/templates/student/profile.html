@@ -12,7 +12,24 @@
     <h2>岗位方向：{{ current_user.direction.name }}</h2>
     <h2>入学时间：{{ current_user.beginStudyTime }}</h2>
     <h2>毕业时间：{{ current_user.endStudyTime }}</h2>
-    <h2>在校学习时间：{{ current_user.studyDays }}</h2>
+    <h2>在校学习时间(选择学习方向后自动计算)：{{ current_user.studyDays }}</h2>
+    <br>
+    <button onclick="getDirectionDetails()">点击打印方向细节</button>
+    <h2 id="detail"></h2>
 {% endif %}
 </body>
+<script src="{{ url_for('static', filename="js/jquery-3.3.1.min.js") }}"></script>
+<script>
+    function getDirectionDetails() {
+        $.get("http://127.0.0.1:5000/student/getDirectionDetails",{},function (data) {
+            console.log("原字符串： "+data);
+            {#data.replace(new RegExp("'","g"),'"');#}
+            {#console.log("替换后的字符串： "+data);#}
+            console.log(typeof data);
+            var l = JSON.parse(data);
+            console.log(l);
+            console.log(typeof l);
+        });
+    }
+</script>
 </html>

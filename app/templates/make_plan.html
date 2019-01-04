@@ -40,11 +40,13 @@
                 <div class="con_box">
                     <table class="table table-hover">
                         <tr>
-                            <td class="table-head" width="20&">课程名称</td>
-                            <td class="table-head" width="20%">开始时间</td>
-                            <td class="table-head" width="20%">结束时间</td>
-                            <td class="table-head" width="20%">总时长</td>
-                            <td class="table-head" width="20%">状态</td>
+                            <td class="table-head">课程名称</td>
+                            <td class="table-head">开始时间</td>
+                            <td class="table-head">结束时间</td>
+                            <td class="table-head">总时长</td>
+                            <td class="table-head">状态</td>
+                            <td class="table-head">实际完成时间</td>
+                            <td class="table-head">点击完成</td>
                         </tr>
 
                         {% for plan in current_user.plans %}
@@ -54,6 +56,8 @@
                             <td>{{ plan.endTime }}</td>
                             <td>{{ plan.days }}天</td>
                             <td>{% if plan.state == 1 %}已完成{% elif plan.state == 0 %}未完成{% elif plan.state == 2 %}学习中{% endif %}</td>
+                            <td>{{ plan.actualEndTime }}</td>
+                            <td><a href="http://127.0.0.1:5000/student/finishPlan/{{ plan.id }}">完成</a></td>
                         </tr>
                         {% endfor %}
 
